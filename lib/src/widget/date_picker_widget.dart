@@ -228,25 +228,13 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
   Widget _renderDatePickerItemComponent(int value, String format) {
     return Container(
       height: widget.pickerTheme.itemHeight,
-      alignment: getAlignment(format),
+      alignment: Alignment.center,
       child: Text(
         DateTimeFormatter.formatDateTime(value, format, widget.locale),
         style:
             widget.pickerTheme.itemTextStyle ?? DATETIME_PICKER_ITEM_TEXT_STYLE,
       ),
     );
-  }
-
-  Alignment getAlignment(String format) {
-    if (format.contains("M")) {
-      return Alignment.centerLeft;
-    } else if (format.contains("d")) {
-      return Alignment.centerRight;
-    } else if (format.contains("y")) {
-      return Alignment.centerLeft;
-    } else {
-      return Alignment.center;
-    }
   }
 
   /// change the selection of year picker
