@@ -2,6 +2,7 @@ import 'dart:math';
 
 part 'strings_en_us.dart';
 part 'strings_zh_cn.dart';
+part 'strings_zh_hk.dart';
 part 'strings_pt_br.dart';
 part 'strings_id.dart';
 part 'strings_ar_eg.dart';
@@ -53,6 +54,9 @@ enum DateTimePickerLocale {
 
   /// Chinese (ZH) Simplified
   zh_cn,
+
+  /// Chinese (ZH) Traditional
+  zh_hk,
 
   /// Portuguese (PT) Brazil
   pt_br,
@@ -128,6 +132,7 @@ const DateTimePickerLocale DATETIME_PICKER_LOCALE_DEFAULT =
 const Map<DateTimePickerLocale, _StringsI18n> datePickerI18n = {
   DateTimePickerLocale.en_us: const _StringsEnUs(),
   DateTimePickerLocale.zh_cn: const _StringsZhCn(),
+  DateTimePickerLocale.zh_hk: const _StringsZhHk(),
   DateTimePickerLocale.pt_br: const _StringsPtBr(),
   DateTimePickerLocale.id: const _StringsId(),
   DateTimePickerLocale.ar_eg: const _StringsArEg(),
