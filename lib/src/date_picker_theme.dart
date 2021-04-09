@@ -83,5 +83,5 @@ class DateTimePickerTheme with Diagnosticable {
   final double itemHeight;
 
   /// The value of DatePicker's column [TextStyle].
-  final TextStyle itemTextStyle;
+  final TextStyle? itemTextStyle;
 }

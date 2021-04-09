@@ -224,7 +224,7 @@ class _DatePickerComponent extends StatelessWidget {
           minuteDivider: route.minuteDivider,
         );
         break;
-      case DateTimePickerMode.datetime:
+      default:
         pickerWidget = DateTimePickerWidget(
           minDateTime: route.minDateTime,
           maxDateTime: route.maxDateTime,
@@ -237,7 +237,6 @@ class _DatePickerComponent extends StatelessWidget {
           onConfirm: route.onConfirm,
           minuteDivider: route.minuteDivider,
         );
-        break;
     }
     return new GestureDetector(
       child: new AnimatedBuilder(
