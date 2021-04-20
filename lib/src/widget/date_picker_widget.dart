@@ -213,10 +213,14 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
     return Expanded(
       flex: 1,
       child: Container(
-        padding: EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(0),
         height: widget.pickerTheme!.pickerHeight,
         decoration: BoxDecoration(color: widget.pickerTheme!.backgroundColor),
         child: CupertinoPicker.builder(
+          selectionOverlay: CupertinoPickerDefaultSelectionOverlay(
+            capLeftEdge: false,
+            capRightEdge: false,
+          ),
           backgroundColor: widget.pickerTheme!.backgroundColor,
           scrollController: scrollCtrl,
           itemExtent: widget.pickerTheme!.itemHeight,

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_cupertino_date_picker/flutter_cupertino_date_picker.dart';
 
 class DatePickerBottomSheet extends StatefulWidget {
-  DatePickerBottomSheet({Key key}) : super(key: key);
+  DatePickerBottomSheet({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _DatePickerBottomSheetState();
@@ -22,7 +22,7 @@ class _DatePickerBottomSheetState extends State<DatePickerBottomSheet> {
   String _format = 'yyyy-MMMM-dd';
   TextEditingController _formatCtrl = TextEditingController();
 
-  DateTime _dateTime;
+  DateTime _dateTime = DateTime.now();
 
   @override
   void initState() {
@@ -34,7 +34,7 @@ class _DatePickerBottomSheetState extends State<DatePickerBottomSheet> {
   @override
   Widget build(BuildContext context) {
     // create locale radio list
-    List<Widget> radios = List<Widget>();
+    List<Widget> radios = [];
     _locales.forEach((locale) {
       radios.add(Container(
         margin: EdgeInsets.only(right: 8.0),
@@ -46,7 +46,7 @@ class _DatePickerBottomSheetState extends State<DatePickerBottomSheet> {
               groupValue: _locale,
               onChanged: (value) {
                 setState(() {
-                  _locale = value;
+                  _locale = value as DateTimePickerLocale;
                 });
               },
             ),
@@ -59,7 +59,7 @@ class _DatePickerBottomSheetState extends State<DatePickerBottomSheet> {
     });
 
     TextStyle hintTextStyle =
-        Theme.of(context).textTheme.subhead.apply(color: Color(0xFF999999));
+        Theme.of(context).textTheme.subtitle1!.apply(color: Color(0xFF999999));
     return Scaffold(
       appBar: AppBar(title: Text('DatePicker Bottom Sheet')),
       body: Container(
@@ -117,7 +117,7 @@ class _DatePickerBottomSheetState extends State<DatePickerBottomSheet> {
                   value: _showTitle,
                   onChanged: (value) {
                     setState(() {
-                      _showTitle = value;
+                      _showTitle = value as bool;
                     });
                   },
                 )

@@ -227,7 +227,7 @@ class _TimePickerWidgetState extends State<TimePickerWidget> {
     return Expanded(
       flex: 1,
       child: Container(
-        padding: EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(0),
         height: widget.pickerTheme!.pickerHeight,
         decoration: BoxDecoration(color: widget.pickerTheme!.backgroundColor),
         child: CupertinoPicker.builder(

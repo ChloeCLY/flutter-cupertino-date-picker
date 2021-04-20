@@ -281,7 +281,7 @@ class _DateTimePickerWidgetState extends State<DateTimePickerWidget> {
           };
 
     Widget columnWidget = Container(
-      padding: EdgeInsets.all(8.0),
+      padding: EdgeInsets.all(0),
       width: double.infinity,
       height: widget.pickerTheme!.pickerHeight,
       decoration: BoxDecoration(color: widget.pickerTheme!.backgroundColor),
