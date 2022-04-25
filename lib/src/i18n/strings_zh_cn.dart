@@ -15,24 +15,6 @@ class _StringsZhCn extends _StringsI18n {
   }
 
   @override
-  List<String> getMonths() {
-    return [
-      "01",
-      "02",
-      "03",
-      "04",
-      "05",
-      "06",
-      "07",
-      "08",
-      "09",
-      "10",
-      "11",
-      "12"
-    ];
-  }
-
-  @override
   List<String> getWeeksFull() {
     return [
       "星期一",
@@ -59,7 +41,25 @@ class _StringsZhCn extends _StringsI18n {
   }
 
   @override
-  List<String>? getMonthsShort() {
+  List<String> getMonthsShort() {
+    return [
+      "1月",
+      "2月",
+      "3月",
+      "4月",
+      "5月",
+      "6月",
+      "7月",
+      "8月",
+      "9月",
+      "10月",
+      "11月",
+      "12月"
+    ];
+  }
+
+  @override
+  List<String> getMonths() {
     return [
       "一月",
       "二月",
