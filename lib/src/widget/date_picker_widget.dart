@@ -1,11 +1,11 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-import '../date_time_formatter.dart';
-import '../date_picker_theme.dart';
 import '../date_picker_constants.dart';
+import '../date_picker_theme.dart';
+import '../date_time_formatter.dart';
 import '../i18n/date_picker_i18n.dart';
 import 'date_picker_title_widget.dart';
 
@@ -218,8 +218,8 @@ class _DatePickerWidgetState extends State<DatePickerWidget> {
         decoration: BoxDecoration(color: widget.pickerTheme!.backgroundColor),
         child: CupertinoPicker.builder(
           selectionOverlay: CupertinoPickerDefaultSelectionOverlay(
-            capLeftEdge: false,
-            capRightEdge: false,
+            capStartEdge: false,
+            capEndEdge: false,
           ),
           backgroundColor: widget.pickerTheme!.backgroundColor,
           scrollController: scrollCtrl,
