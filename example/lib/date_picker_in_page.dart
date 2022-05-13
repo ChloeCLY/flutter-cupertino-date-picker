@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_cupertino_date_picker/flutter_cupertino_date_picker.dart';
 
 ///
@@ -47,7 +46,7 @@ class _DatePickerInPageState extends State<DatePickerInPage> {
                     child: Text('min DateTime:', style: hintTextStyle),
                   ),
                   Text(MIN_DATETIME,
-                      style: Theme.of(context).textTheme.subhead),
+                      style: Theme.of(context).textTheme.bodyText2),
                 ],
               ),
             ),
@@ -61,7 +60,7 @@ class _DatePickerInPageState extends State<DatePickerInPage> {
                       width: 115.0,
                       child: Text('max DateTime:', style: hintTextStyle)),
                   Text(MAX_DATETIME,
-                      style: Theme.of(context).textTheme.subhead),
+                      style: Theme.of(context).textTheme.bodyText2),
                 ],
               ),
             ),
@@ -76,7 +75,7 @@ class _DatePickerInPageState extends State<DatePickerInPage> {
                     child: Text('init DateTime:', style: hintTextStyle),
                   ),
                   Text(INIT_DATETIME,
-                      style: Theme.of(context).textTheme.subhead),
+                      style: Theme.of(context).textTheme.bodyText2),
                 ],
               ),
             ),
@@ -90,7 +89,8 @@ class _DatePickerInPageState extends State<DatePickerInPage> {
                     width: 115.0,
                     child: Text('Date Format:', style: hintTextStyle),
                   ),
-                  Text(DATE_FORMAT, style: Theme.of(context).textTheme.subhead),
+                  Text(DATE_FORMAT,
+                      style: Theme.of(context).textTheme.bodyText2),
                 ],
               ),
             ),
@@ -119,7 +119,7 @@ DateTimePickerTheme(
                       style: TextStyle(fontSize: 14.0),
                     ),
                     actions: <Widget>[
-                      new FlatButton(
+                      new TextButton(
                         child: new Text("OK"),
                         onPressed: () {
                           Navigator.of(context).pop();
@@ -173,14 +173,14 @@ DateTimePickerTheme(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Text('Selected Date:',
-                    style: Theme.of(context).textTheme.subhead),
+                    style: Theme.of(context).textTheme.bodyText2),
                 Container(
                   padding: EdgeInsets.only(left: 12.0),
                   child: Text(
                     _dateTime != null
                         ? '${_dateTime.year}-${_dateTime.month.toString().padLeft(2, '0')}-${_dateTime.day.toString().padLeft(2, '0')}'
                         : '',
-                    style: Theme.of(context).textTheme.title,
+                    style: Theme.of(context).textTheme.bodyText2,
                   ),
                 ),
               ],

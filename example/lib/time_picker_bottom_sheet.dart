@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_cupertino_date_picker/flutter_cupertino_date_picker.dart';
 
 class TimePickerBottomSheet extends StatefulWidget {
@@ -46,7 +45,7 @@ class _TimePickerBottomSheetState extends State<TimePickerBottomSheet> {
                     child: Text('min DateTime:', style: hintTextStyle),
                   ),
                   Text(MIN_DATETIME.substring(11),
-                      style: Theme.of(context).textTheme.subhead),
+                      style: Theme.of(context).textTheme.bodyText2),
                 ],
               ),
             ),
@@ -61,7 +60,7 @@ class _TimePickerBottomSheetState extends State<TimePickerBottomSheet> {
                     child: Text('max DateTime:', style: hintTextStyle),
                   ),
                   Text(MAX_DATETIME.substring(11),
-                      style: Theme.of(context).textTheme.subhead),
+                      style: Theme.of(context).textTheme.bodyText2),
                 ],
               ),
             ),
@@ -76,7 +75,7 @@ class _TimePickerBottomSheetState extends State<TimePickerBottomSheet> {
                     child: Text('init DateTime:', style: hintTextStyle),
                   ),
                   Text(INIT_DATETIME.substring(11),
-                      style: Theme.of(context).textTheme.subhead),
+                      style: Theme.of(context).textTheme.bodyText2),
                 ],
               ),
             ),
@@ -98,7 +97,7 @@ class _TimePickerBottomSheetState extends State<TimePickerBottomSheet> {
                     margin: EdgeInsets.only(right: 8.0),
                     child: Text('custom title height:', style: hintTextStyle),
                   ),
-                  Text('56.0', style: Theme.of(context).textTheme.subhead),
+                  Text('56.0', style: Theme.of(context).textTheme.bodyText2),
                 ],
               ),
             ),
@@ -122,12 +121,12 @@ class _TimePickerBottomSheetState extends State<TimePickerBottomSheet> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text('Selected Time:',
-                      style: Theme.of(context).textTheme.subhead),
+                      style: Theme.of(context).textTheme.bodyText2),
                   Container(
                     padding: EdgeInsets.only(left: 12.0),
                     child: Text(
                         '${_dateTime.hour.toString().padLeft(2, '0')}:${_dateTime.minute.toString().padLeft(2, '0')}:${_dateTime.second.toString().padLeft(2, '0')}',
-                        style: Theme.of(context).textTheme.title),
+                        style: Theme.of(context).textTheme.bodyText2),
                   ),
                 ],
               ),
